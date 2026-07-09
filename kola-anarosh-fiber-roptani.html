@@ -165,11 +165,32 @@
   #toTop.show { opacity: 1; pointer-events: auto; }
   #toTop:hover { background: #14532d; }
   @media (max-width: 600px) { .gallery { grid-template-columns: 1fr; } }
+  .uh-topnav { position: sticky; top: 0; z-index: 60; background: #14532d; width: 100vw; margin: -24px 0 26px calc(50% - 50vw); box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+  .uh-topnav-in { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; gap: 18px; padding: 12px 20px; flex-wrap: wrap; }
+  .uh-topnav a { text-decoration: none; }
+  .uh-topnav .lg { font-size: 19px; font-weight: 800; color: #fff; margin-right: auto; }
+  .uh-topnav .lg em { color: #86efac; font-style: normal; }
+  .uh-topnav .nl { color: #dcfce7; font-size: 14px; font-weight: 600; padding: 6px 2px; border-bottom: 2px solid transparent; }
+  .uh-topnav .nl:hover { color: #fff; border-bottom-color: #86efac; }
+  .uh-topnav .nl.on { color: #fff; border-bottom-color: #86efac; }
+  @media print { .uh-topnav { display: none; } }
   canvas { max-height: 340px; }
   @media (max-width: 600px) { .swot { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
+
+<nav class="uh-topnav">
+  <div class="uh-topnav-in">
+    <a class="lg" href="index.html">🌱 উদ্যোক্তা <em>হাব</em></a>
+    <a class="nl on" href="blog.html">ব্লগ</a>
+    <a class="nl" href="ai-services.html">AI সেবা</a>
+    <a class="nl" href="planner.html">বিজনেস প্ল্যানার</a>
+    <a class="nl" href="videos.html">ভিডিও</a>
+    <a class="nl" href="about.html">আমাদের কথা</a>
+  </div>
+</nav>
+
 
 <h1>কলা ও আনারস ফাইবার: বাংলাদেশের পরবর্তী বড় রপ্তানি সম্ভাবনা</h1>
 
