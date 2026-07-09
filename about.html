@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>আমাদের কথা — উদ্যোক্তা হাব | About UdyoktaHub</title>
+<meta name="description" content="ব্যবসার সিদ্ধান্ত হোক ডেটায়, অনুমানে নয় — উদ্যোক্তা হাবের লক্ষ্য, নীতি ও লেখক পরিচিতি।">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body style="margin:0">
+<!-- উদ্যোক্তা হাব / UdyoktaHub — ABOUT US PAGE. Paste entire file into a WordPress "Custom HTML" block. -->
+<style>
+  .uh { font-family: 'Noto Sans Bengali','Inter',sans-serif; color: #1a1a1a; line-height: 1.9; }
+  .uh * { box-sizing: border-box; }
+  .uh .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+  .uh a { text-decoration: none; }
+  .uh.lang-en .bn { display: none !important; }
+  .uh:not(.lang-en) .en { display: none !important; }
+  .uh-head { position: sticky; top: 0; z-index: 50; background: #14532d; box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+  .uh-nav { display: flex; align-items: center; gap: 18px; padding: 12px 20px; max-width: 1080px; margin: 0 auto; flex-wrap: wrap; }
+  .uh-logo { font-size: 20px; font-weight: 800; color: #fff !important; margin-right: auto; }
+  .uh-logo em { color: #86efac; font-style: normal; }
+  .uh-nav a.nl { color: #dcfce7 !important; font-size: 14.5px; font-weight: 600; padding: 6px 2px; border-bottom: 2px solid transparent; }
+  .uh-nav a.nl:hover { color: #fff !important; border-bottom-color: #86efac; }
+  .uh-lang { background: #86efac; color: #14532d; border: none; font-weight: 800; font-size: 13px; padding: 7px 14px; border-radius: 18px; cursor: pointer; font-family: inherit; }
+  .uh-phero { background: linear-gradient(135deg, #14532d, #166534); color: #fff; padding: 46px 0 42px; text-align: center; }
+  .uh-phero h1 { font-size: 30px; margin: 0 0 8px; }
+  .uh-phero h1 em { color: #86efac; font-style: normal; }
+  .uh-phero p { color: #dcfce7; font-size: 15.5px; max-width: 640px; margin: 0 auto; }
+  .uh-sec { padding: 36px 0 6px; }
+  .uh-sec h2 { font-size: 23px; color: #14532d; border-bottom: 2px solid #bbf7d0; padding-bottom: 6px; margin: 0 0 14px; }
+  .uh-sec p { font-size: 15.5px; color: #374151; }
+  .uh-author { display: flex; gap: 22px; align-items: flex-start; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 16px; padding: 24px; margin: 20px 0; flex-wrap: wrap; }
+  .uh-author .av { width: 84px; height: 84px; border-radius: 50%; background: #14532d; color: #86efac; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; flex-shrink: 0; }
+  .uh-author h3 { margin: 0 0 4px; color: #14532d; font-size: 19px; }
+  .uh-author .role { color: #15803d; font-weight: 700; font-size: 13.5px; margin-bottom: 8px; }
+  .uh-author p { font-size: 14.5px; margin: 0; }
+  .uh-vals { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin: 20px 0; }
+  .uh-val { background: #fff; border: 1px solid #e5e7eb; border-top: 4px solid #15803d; border-radius: 14px; padding: 20px; box-shadow: 0 2px 8px rgba(20,83,45,0.06); }
+  .uh-val .ic { font-size: 30px; }
+  .uh-val h3 { font-size: 16px; color: #14532d; margin: 8px 0 4px; }
+  .uh-val p { font-size: 13.5px; color: #4b5563; margin: 0; }
+  .uh-contact { background: #14532d; color: #fff; border-radius: 18px; padding: 32px 28px; text-align: center; margin: 36px 0 44px; }
+  .uh-contact h2 { color: #86efac; border: none; margin: 0 0 8px; font-size: 22px; }
+  .uh-contact p { color: #dcfce7; font-size: 14.5px; margin: 0 0 16px; }
+  .uh-cta { display: inline-block; background: #86efac; color: #14532d !important; font-weight: 800; font-size: 15px; padding: 12px 28px; border-radius: 28px; margin: 0 5px; }
+  .uh-cta.ghost { background: transparent; color: #dcfce7 !important; border: 2px solid #86efac; }
+  .uh-foot { background: #052e16; color: #bbf7d0; padding: 24px 0; text-align: center; font-size: 13.5px; }
+  @media (max-width: 700px) { .uh-vals { grid-template-columns: 1fr; } }
+</style>
+
+<div class="uh" id="uhRoot">
+
+<header class="uh-head">
+  <div class="uh-nav">
+    <a class="uh-logo" href="index.html">🌱 <span class="bn">উদ্যোক্তা <em>হাব</em></span><span class="en">Udyokta<em>Hub</em></span></a>
+    <a class="nl" href="blog.html"><span class="bn">ব্লগ</span><span class="en">Blog</span></a>
+    <a class="nl" href="ai-services.html"><span class="bn">AI সেবা</span><span class="en">AI Services</span></a>
+    <a class="nl" href="planner.html"><span class="bn">বিজনেস প্ল্যানার</span><span class="en">Planner</span></a>
+    <a class="nl" href="videos.html"><span class="bn">ভিডিও</span><span class="en">Videos</span></a>
+    <a class="nl" href="about.html" style="border-bottom-color:#86efac;color:#fff !important"><span class="bn">আমাদের কথা</span><span class="en">About</span></a>
+    <button class="uh-lang" id="uhLang">EN</button>
+  </div>
+</header>
+
+<section class="uh-phero">
+  <div class="wrap">
+    <h1><span class="bn">আমাদের <em>কথা</em></span><span class="en">About <em>Us</em></span></h1>
+    <p><span class="bn">"ব্যবসার সিদ্ধান্ত হোক অনুমানে নয় — ডেটায়।" এই এক বাক্যেই উদ্যোক্তা হাবের জন্মকথা।</span><span class="en">"Business decisions should run on data — not guesswork." That one sentence is why UdyoktaHub exists.</span></p>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="uh-sec">
+    <h2><span class="bn">কেন উদ্যোক্তা হাব</span><span class="en">Why UdyoktaHub</span></h2>
+    <p><span class="bn">বাংলায় ব্যবসার কনটেন্টের অভাব নেই — অভাব <strong>সংখ্যা ও সূত্রসহ</strong> কনটেন্টের। "এই ব্যবসায় লাখ টাকা আয়!" ধরনের ভিডিও অনেক, কিন্তু বাজারের আকার কত, ব্রেক-ইভেন কবে, কোন লাইসেন্স লাগবে, ক্রেতা কোথায় — এসব প্রশ্নের জবাব প্রায় কেউ দেয় না। উদ্যোক্তা হাব সেই শূন্যস্থান পূরণ করে: প্রতিটি আইডিয়ার সঙ্গে বাজার-ডেটা, SWOT, বাস্তব কেস স্টাডি ও ধাপে ধাপে রোডম্যাপ — প্রতিটি সংখ্যার পেছনে তথ্যসূত্র।</span><span class="en">There's no shortage of business content in Bangla — what's missing is content <strong>with numbers and sources</strong>. Plenty of "earn lakhs from this business!" videos, but almost nobody answers: how big is the market, when do you break even, which licenses do you need, where are the buyers? UdyoktaHub fills that gap: every idea comes with market data, SWOT, real case studies, and a step-by-step roadmap — with a citation behind every number.</span></p>
+  </section>
+
+  <section class="uh-sec">
+    <h2><span class="bn">আমাদের ৩টি নীতি</span><span class="en">Our 3 Principles</span></h2>
+    <div class="uh-vals">
+      <div class="uh-val"><div class="ic">🔍</div><h3><span class="bn">সোর্স ছাড়া সংখ্যা নয়</span><span class="en">No Number Without a Source</span></h3><p><span class="bn">প্রতিটি পরিসংখ্যানের তথ্যসূত্র লেখার শেষে পাবেন। অনুমান হলে সেটিও স্পষ্ট বলা থাকে।</span><span class="en">Every statistic is cited at the end of the article. If it's an estimate, we say so explicitly.</span></p></div>
+      <div class="uh-val"><div class="ic">⚖️</div><h3><span class="bn">হাইপ নয়, দুই পাশই</span><span class="en">Both Sides, No Hype</span></h3><p><span class="bn">শুধু সুযোগ নয় — ঝুঁকি, দুর্বলতা ও ব্যর্থতার কারণও সমান গুরুত্বে বিশ্লেষণ করি।</span><span class="en">Not just the opportunity — risks, weaknesses, and failure modes get equal analytical weight.</span></p></div>
+      <div class="uh-val"><div class="ic">🛠️</div><h3><span class="bn">পড়া নয়, করা</span><span class="en">Doing, Not Just Reading</span></h3><p><span class="bn">প্রতিটি লেখা শেষ হয় কার্যকর চেকলিস্ট ও পরবর্তী পদক্ষেপে — যেন পড়ার পর শুরু করা যায়।</span><span class="en">Every article ends with an actionable checklist and next steps — so reading turns into starting.</span></p></div>
+    </div>
+  </section>
+
+  <section class="uh-sec">
+    <h2><span class="bn">লেখক পরিচিতি</span><span class="en">The Author</span></h2>
+    <div class="uh-author">
+      <div class="av">মে</div>
+      <div>
+        <h3><span class="bn">মেহাদী হাসান সাকি</span><span class="en">Mehadi Hassan Saki</span></h3>
+        <div class="role"><span class="bn">প্রতিষ্ঠাতা ও লেখক — উদ্যোক্তা হাব</span><span class="en">Founder & Writer — UdyoktaHub</span></div>
+        <p><span class="bn">ব্যবসা ও রপ্তানি-বাণিজ্য বিষয়ক লেখক। ডেটা-বিশ্লেষণ ও AI টুল ব্যবহার করে বাংলাদেশের অপ্রচলিত ব্যবসার সুযোগগুলো খুঁজে বের করা ও সেগুলোকে কার্যকর রোডম্যাপে রূপ দেওয়াই মূল কাজ। লেখার বাইরে SME উদ্যোক্তাদের জন্য কাস্টম মার্কেট রিসার্চ ও বিজনেস প্ল্যান তৈরি করেন।</span><span class="en">A writer on business and export trade. His core work: using data analysis and AI tools to uncover Bangladesh's overlooked business opportunities and turn them into actionable roadmaps. Beyond writing, he builds custom market research and business plans for SME entrepreneurs.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="uh-sec">
+    <h2><span class="bn">যা পাবেন এখানে</span><span class="en">What You'll Find Here</span></h2>
+    <p><span class="bn">📊 <strong>ডেটা-নির্ভর ব্লগ</strong> — চার্ট, SWOT ও রোডম্যাপসহ গভীর বিশ্লেষণ · 🤖 <strong>AI বিজনেস সেবা</strong> — কাস্টম রিসার্চ ও ভ্যালিডেশন · 🧮 <strong>ফ্রি প্ল্যানার</strong> — লাইভ ব্রেক-ইভেন ক্যালকুলেটর · 🎬 <strong>ভিডিও ব্লগ</strong> — দেখে শেখার কনটেন্ট।</span><span class="en">📊 <strong>Data-driven blog</strong> — deep dives with charts, SWOT & roadmaps · 🤖 <strong>AI business services</strong> — custom research & validation · 🧮 <strong>Free planner</strong> — live break-even calculator · 🎬 <strong>Video blog</strong> — learn-by-watching content.</span></p>
+  </section>
+
+  <div class="uh-contact">
+    <h2><span class="bn">📮 যোগাযোগ করুন</span><span class="en">📮 Get in Touch</span></h2>
+    <p><span class="bn">প্রশ্ন, পরামর্শ, কোলাবরেশন বা কাস্টম রিসার্চ — যেকোনো প্রয়োজনে লিখুন। ২৪–৪৮ ঘণ্টার মধ্যে উত্তর পাবেন।</span><span class="en">Questions, suggestions, collaborations, or custom research — write anytime. You'll hear back within 24–48 hours.</span></p>
+    <a class="uh-cta" href="mailto:coder.saki@gmail.com">coder.saki@gmail.com</a>
+    <a class="uh-cta ghost" href="ai-services.html"><span class="bn">সেবার তালিকা দেখুন</span><span class="en">View Services</span></a>
+  </div>
+</div>
+
+<footer class="uh-foot">
+  <div class="wrap">© ২০২৬ <span class="bn">উদ্যোক্তা হাব — মেহাদী হাসান সাকি</span><span class="en">UdyoktaHub — Mehadi Hassan Saki</span></div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var root = document.getElementById('uhRoot'), btn = document.getElementById('uhLang');
+  function setLang(l){ root.classList.toggle('lang-en', l==='en'); btn.textContent = l==='en' ? 'বাংলা' : 'EN'; try{localStorage.setItem('uh-lang', l);}catch(e){} }
+  var saved='bn'; try{saved=localStorage.getItem('uh-lang')||'bn';}catch(e){}
+  setLang(saved);
+  btn.addEventListener('click', function(){ setLang(root.classList.contains('lang-en') ? 'bn' : 'en'); });
+})();
+</script>
+
+</body>
+</html>

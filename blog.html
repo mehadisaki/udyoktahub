@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ব্লগ — উদ্যোক্তা হাব | Blog — UdyoktaHub</title>
+<meta name="description" content="বাংলাদেশের উদ্যোক্তাদের জন্য ডেটা-নির্ভর ব্যবসার আইডিয়া — বাজার বিশ্লেষণ, SWOT, কেস স্টাডি ও রোডম্যাপসহ।">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; }
+  .uh { font-family: 'Noto Sans Bengali','Inter',sans-serif; color: #1a1a1a; line-height: 1.8; }
+  .uh * { box-sizing: border-box; }
+  .uh .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  .uh a { text-decoration: none; }
+  .uh.lang-en .bn { display: none !important; }
+  .uh:not(.lang-en) .en { display: none !important; }
+  .uh-head { position: sticky; top: 0; z-index: 50; background: #14532d; box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+  .uh-nav { display: flex; align-items: center; gap: 18px; padding: 12px 20px; max-width: 1080px; margin: 0 auto; flex-wrap: wrap; }
+  .uh-logo { font-size: 20px; font-weight: 800; color: #fff !important; margin-right: auto; }
+  .uh-logo em { color: #86efac; font-style: normal; }
+  .uh-nav a.nl { color: #dcfce7 !important; font-size: 14.5px; font-weight: 600; padding: 6px 2px; border-bottom: 2px solid transparent; }
+  .uh-nav a.nl:hover { color: #fff !important; border-bottom-color: #86efac; }
+  .uh-lang { background: #86efac; color: #14532d; border: none; font-weight: 800; font-size: 13px; padding: 7px 14px; border-radius: 18px; cursor: pointer; font-family: inherit; }
+  .uh-phero { background: linear-gradient(135deg, #14532d, #166534); color: #fff; padding: 42px 0 38px; text-align: center; }
+  .uh-phero h1 { font-size: 30px; margin: 0 0 8px; }
+  .uh-phero h1 em { color: #86efac; font-style: normal; }
+  .uh-phero p { color: #dcfce7; font-size: 15px; max-width: 660px; margin: 0 auto; }
+  .uh-grid3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin: 34px 0 46px; }
+  .uh-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 10px rgba(20,83,45,0.07); transition: transform .2s; display: flex; flex-direction: column; }
+  .uh-card:hover { transform: translateY(-4px); }
+  .uh-card .thumb { aspect-ratio: 16/9; background: linear-gradient(135deg,#f0fdf4,#dcfce7); display: flex; align-items: center; justify-content: center; font-size: 54px; }
+  .uh-card .bd { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
+  .uh-card .tag { align-self: flex-start; background: #dcfce7; color: #15803d; font-size: 12px; font-weight: 700; padding: 2px 12px; border-radius: 12px; margin-bottom: 8px; }
+  .uh-card h3 { font-size: 17.5px; color: #14532d; margin: 0 0 6px; line-height: 1.5; }
+  .uh-card p { font-size: 14px; color: #4b5563; margin: 0 0 12px; flex: 1; }
+  .uh-card .go { color: #15803d !important; font-weight: 700; font-size: 14px; }
+  .uh-foot { background: #052e16; color: #bbf7d0; padding: 24px 0; text-align: center; font-size: 13.5px; }
+  @media (max-width: 800px) { .uh-grid3 { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .uh-grid3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="uh" id="uhRoot">
+
+<header class="uh-head">
+  <div class="uh-nav">
+    <a class="uh-logo" href="index.html">🌱 <span class="bn">উদ্যোক্তা <em>হাব</em></span><span class="en">Udyokta<em>Hub</em></span></a>
+    <a class="nl" href="blog.html" style="border-bottom-color:#86efac;color:#fff !important"><span class="bn">ব্লগ</span><span class="en">Blog</span></a>
+    <a class="nl" href="ai-services.html"><span class="bn">AI সেবা</span><span class="en">AI Services</span></a>
+    <a class="nl" href="planner.html"><span class="bn">বিজনেস প্ল্যানার</span><span class="en">Planner</span></a>
+    <a class="nl" href="videos.html"><span class="bn">ভিডিও</span><span class="en">Videos</span></a>
+    <a class="nl" href="about.html"><span class="bn">আমাদের কথা</span><span class="en">About</span></a>
+    <button class="uh-lang" id="uhLang">EN</button>
+  </div>
+</header>
+
+<section class="uh-phero">
+  <div class="wrap">
+    <h1><span class="bn">📊 ডেটা-নির্ভর <em>বিজনেস ব্লগ</em></span><span class="en">📊 Data-Driven <em>Business Blog</em></span></h1>
+    <p><span class="bn">প্রতিটি লেখায়: বাজারের আকার, SWOT, কেস স্টাডি, ক্রেতা-লিংক ও শুরু করার রোডম্যাপ — সোর্সসহ।</span><span class="en">Every post: market size, SWOT, case studies, buyer links, and a launch roadmap — fully sourced.</span></p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="uh-grid3">
+    <a class="uh-card" href="kola-anarosh-fiber-roptani.html">
+      <div class="thumb">🍌🍍</div>
+      <div class="bd">
+        <span class="tag"><span class="bn">রপ্তানি সম্ভাবনা</span><span class="en">Export Potential</span></span>
+        <h3><span class="bn">কলা ও আনারস ফাইবার: পরবর্তী বড় রপ্তানি খাত</span><span class="en">Banana & Pineapple Fiber: The Next Big Export</span></h3>
+        <p><span class="bn">$৯.৪ কোটির সুযোগ, প্রায় শূন্য কাঁচামাল ব্যয় — SWOT, কেস স্টাডি ও ৭ ধাপের রোডম্যাপ।</span><span class="en">A $94M opportunity, near-zero raw material cost — SWOT, case studies & 7-step roadmap.</span></p>
+        <span class="go"><span class="bn">পড়ুন →</span><span class="en">Read →</span></span>
+      </div>
+    </a>
+    <div class="uh-card">
+      <div class="thumb">🐉</div>
+      <div class="bd">
+        <span class="tag"><span class="bn">শীঘ্রই আসছে</span><span class="en">Coming Soon</span></span>
+        <h3><span class="bn">ড্রাগন ফল চাষ ও প্রক্রিয়াজাতকরণ</span><span class="en">Dragon Fruit Farming & Processing</span></h3>
+        <p><span class="bn">প্রিমিয়াম বাজারের পূর্ণ বিশ্লেষণ আসছে।</span><span class="en">Full premium-market analysis coming.</span></p>
+      </div>
+    </div>
+    <div class="uh-card">
+      <div class="thumb">🍯</div>
+      <div class="bd">
+        <span class="tag"><span class="bn">শীঘ্রই আসছে</span><span class="en">Coming Soon</span></span>
+        <h3><span class="bn">সুন্দরবনের মধু: ব্র্যান্ডিং ও রপ্তানি</span><span class="en">Sundarbans Honey: Branding & Export</span></h3>
+        <p><span class="bn">GI-পণ্যের বৈশ্বিক সম্ভাবনা — গাইড আসছে।</span><span class="en">A GI product's global potential — guide coming.</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="uh-foot">
+  <div class="wrap">© ২০২৬ <span class="bn">উদ্যোক্তা হাব</span><span class="en">UdyoktaHub</span> · coder.saki@gmail.com</div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var root = document.getElementById('uhRoot'), btn = document.getElementById('uhLang');
+  function setLang(l){ root.classList.toggle('lang-en', l==='en'); btn.textContent = l==='en' ? 'বাংলা' : 'EN'; try{localStorage.setItem('uh-lang', l);}catch(e){} }
+  var saved='bn'; try{saved=localStorage.getItem('uh-lang')||'bn';}catch(e){}
+  setLang(saved);
+  btn.addEventListener('click', function(){ setLang(root.classList.contains('lang-en') ? 'bn' : 'en'); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ভিডিও ব্লগ — উদ্যোক্তা হাব | Video Blog</title>
+<meta name="description" content="বিজনেস আইডিয়া ব্রেকডাউন, হাউ-টু গাইড ও উদ্যোক্তার সফলতার গল্প — ভিডিওতে।">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body style="margin:0">
+<!-- উদ্যোক্তা হাব / UdyoktaHub — VIDEO BLOG PAGE. Paste entire file into a WordPress "Custom HTML" block.
+     TODO: Replace each placeholder .vph block with a real YouTube embed:
+     <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="..." loading="lazy" allowfullscreen
+             style="width:100%;aspect-ratio:16/9;border:0;display:block"></iframe> -->
+<style>
+  .uh { font-family: 'Noto Sans Bengali','Inter',sans-serif; color: #1a1a1a; line-height: 1.8; }
+  .uh * { box-sizing: border-box; }
+  .uh .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  .uh a { text-decoration: none; }
+  .uh.lang-en .bn { display: none !important; }
+  .uh:not(.lang-en) .en { display: none !important; }
+  .uh-head { position: sticky; top: 0; z-index: 50; background: #14532d; box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+  .uh-nav { display: flex; align-items: center; gap: 18px; padding: 12px 20px; max-width: 1080px; margin: 0 auto; flex-wrap: wrap; }
+  .uh-logo { font-size: 20px; font-weight: 800; color: #fff !important; margin-right: auto; }
+  .uh-logo em { color: #86efac; font-style: normal; }
+  .uh-nav a.nl { color: #dcfce7 !important; font-size: 14.5px; font-weight: 600; padding: 6px 2px; border-bottom: 2px solid transparent; }
+  .uh-nav a.nl:hover { color: #fff !important; border-bottom-color: #86efac; }
+  .uh-lang { background: #86efac; color: #14532d; border: none; font-weight: 800; font-size: 13px; padding: 7px 14px; border-radius: 18px; cursor: pointer; font-family: inherit; }
+  .uh-phero { background: linear-gradient(135deg, #14532d, #166534); color: #fff; padding: 42px 0 38px; text-align: center; }
+  .uh-phero h1 { font-size: 30px; margin: 0 0 8px; }
+  .uh-phero h1 em { color: #86efac; font-style: normal; }
+  .uh-phero p { color: #dcfce7; font-size: 15px; max-width: 660px; margin: 0 auto; }
+  .uh-chips { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin: 26px 0 6px; }
+  .uh-chip { background: #f0fdf4; border: 1.5px solid #86efac; color: #14532d; font-size: 13.5px; font-weight: 700; padding: 7px 18px; border-radius: 20px; cursor: pointer; font-family: inherit; }
+  .uh-chip.on { background: #15803d; color: #fff; border-color: #15803d; }
+  .uh-vgrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin: 26px 0 44px; }
+  .uh-vcard { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 10px rgba(20,83,45,0.07); }
+  .uh-vcard .vph { aspect-ratio: 16/9; background: linear-gradient(135deg, #052e16, #14532d); display: flex; flex-direction: column; align-items: center; justify-content: center; color: #86efac; gap: 6px; }
+  .uh-vcard .vph .play { width: 54px; height: 54px; border-radius: 50%; background: rgba(134,239,172,0.2); border: 2px solid #86efac; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+  .uh-vcard .vph .tt { font-size: 12px; }
+  .uh-vcard .bd { padding: 14px 18px 16px; }
+  .uh-vcard .tag { display: inline-block; background: #dcfce7; color: #15803d; font-size: 11.5px; font-weight: 700; padding: 2px 10px; border-radius: 10px; margin-bottom: 6px; }
+  .uh-vcard h3 { font-size: 15.5px; color: #14532d; margin: 0 0 4px; line-height: 1.5; }
+  .uh-vcard p { font-size: 13px; color: #6b7280; margin: 0; }
+  .uh-sub { background: #14532d; color: #fff; border-radius: 20px; padding: 34px 30px; text-align: center; margin: 0 0 44px; }
+  .uh-sub h2 { color: #86efac; margin: 0 0 8px; font-size: 22px; }
+  .uh-sub p { color: #dcfce7; font-size: 14.5px; margin: 0 0 16px; }
+  .uh-cta { display: inline-block; background: #86efac; color: #14532d !important; font-weight: 800; font-size: 15px; padding: 12px 28px; border-radius: 28px; }
+  .uh-foot { background: #052e16; color: #bbf7d0; padding: 24px 0; text-align: center; font-size: 13.5px; }
+  @media (max-width: 800px) { .uh-vgrid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .uh-vgrid { grid-template-columns: 1fr; } }
+</style>
+
+<div class="uh" id="uhRoot">
+
+<header class="uh-head">
+  <div class="uh-nav">
+    <a class="uh-logo" href="index.html">🌱 <span class="bn">উদ্যোক্তা <em>হাব</em></span><span class="en">Udyokta<em>Hub</em></span></a>
+    <a class="nl" href="blog.html"><span class="bn">ব্লগ</span><span class="en">Blog</span></a>
+    <a class="nl" href="ai-services.html"><span class="bn">AI সেবা</span><span class="en">AI Services</span></a>
+    <a class="nl" href="planner.html"><span class="bn">বিজনেস প্ল্যানার</span><span class="en">Planner</span></a>
+    <a class="nl" href="videos.html" style="border-bottom-color:#86efac;color:#fff !important"><span class="bn">ভিডিও</span><span class="en">Videos</span></a>
+    <a class="nl" href="about.html"><span class="bn">আমাদের কথা</span><span class="en">About</span></a>
+    <button class="uh-lang" id="uhLang">EN</button>
+  </div>
+</header>
+
+<section class="uh-phero">
+  <div class="wrap">
+    <h1><span class="bn">🎬 <em>ভিডিও</em> ব্লগ</span><span class="en">🎬 <em>Video</em> Blog</span></h1>
+    <p><span class="bn">পড়ার সময় নেই? দেখে শিখুন — বিজনেস আইডিয়া ব্রেকডাউন, কারখানা সফর ও উদ্যোক্তার গল্প।</span><span class="en">No time to read? Learn by watching — business idea breakdowns, factory tours, and entrepreneur stories.</span></p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="uh-chips">
+    <button class="uh-chip on" data-cat="all"><span class="bn">সব</span><span class="en">All</span></button>
+    <button class="uh-chip" data-cat="idea"><span class="bn">আইডিয়া ব্রেকডাউন</span><span class="en">Idea Breakdowns</span></button>
+    <button class="uh-chip" data-cat="howto"><span class="bn">হাউ-টু গাইড</span><span class="en">How-To Guides</span></button>
+    <button class="uh-chip" data-cat="story"><span class="bn">সফলতার গল্প</span><span class="en">Success Stories</span></button>
+  </div>
+
+  <div class="uh-vgrid">
+    <div class="uh-vcard" data-cat="idea">
+      <!-- TODO: replace with <iframe src="https://www.youtube.com/embed/VIDEO_ID" ...> -->
+      <div class="vph"><div class="play">▶</div><div class="tt"><span class="bn">ভিডিও আসছে</span><span class="en">Video coming soon</span></div></div>
+      <div class="bd"><span class="tag"><span class="bn">আইডিয়া ব্রেকডাউন</span><span class="en">Idea Breakdown</span></span>
+      <h3><span class="bn">কলা ফাইবার রপ্তানি: ১০ মিনিটে পুরো বিশ্লেষণ</span><span class="en">Banana Fiber Export: Full Analysis in 10 Minutes</span></h3>
+      <p><span class="bn">ব্লগের $৯.৪ কোটির হিসাবটি ভিডিওতে</span><span class="en">The blog's $94M math, explained on video</span></p></div>
+    </div>
+    <div class="uh-vcard" data-cat="howto">
+      <div class="vph"><div class="play">▶</div><div class="tt"><span class="bn">ভিডিও আসছে</span><span class="en">Video coming soon</span></div></div>
+      <div class="bd"><span class="tag"><span class="bn">হাউ-টু</span><span class="en">How-To</span></span>
+      <h3><span class="bn">ERC ও রপ্তানি নিবন্ধন: ধাপে ধাপে</span><span class="en">ERC & Export Registration: Step by Step</span></h3>
+      <p><span class="bn">CCI&E নিবন্ধনের পুরো প্রক্রিয়া</span><span class="en">The complete CCI&E registration process</span></p></div>
+    </div>
+    <div class="uh-vcard" data-cat="story">
+      <div class="vph"><div class="play">▶</div><div class="tt"><span class="bn">ভিডিও আসছে</span><span class="en">Video coming soon</span></div></div>
+      <div class="bd"><span class="tag"><span class="bn">সফলতার গল্প</span><span class="en">Success Story</span></span>
+      <h3><span class="bn">১৪ লক্ষ থেকে ২০০ কোটি: CHP-র যাত্রা</span><span class="en">From ৳14 Lakh to ৳200 Crore: The CHP Journey</span></h3>
+      <p><span class="bn">ফাইবার-পণ্যে বিশ্বজয়ের কেস স্টাডি</span><span class="en">A case study in conquering the world with fiber products</span></p></div>
+    </div>
+    <div class="uh-vcard" data-cat="howto">
+      <div class="vph"><div class="play">▶</div><div class="tt"><span class="bn">ভিডিও আসছে</span><span class="en">Video coming soon</span></div></div>
+      <div class="bd"><span class="tag"><span class="bn">হাউ-টু</span><span class="en">How-To</span></span>
+      <h3><span class="bn">বিজনেস প্ল্যানার টুল ব্যবহার করবেন যেভাবে</span><span class="en">How to Use the Business Planner Tool</span></h3>
+      <p><span class="bn">৫ মিনিটে নিজের ব্রেক-ইভেন বের করুন</span><span class="en">Find your break-even in 5 minutes</span></p></div>
+    </div>
+    <div class="uh-vcard" data-cat="idea">
+      <div class="vph"><div class="play">▶</div><div class="tt"><span class="bn">ভিডিও আসছে</span><span class="en">Video coming soon</span></div></div>
+      <div class="bd"><span class="tag"><span class="bn">আইডিয়া ব্রেকডাউন</span><span class="en">Idea Breakdown</span></span>
+      <h3><span class="bn">অনলাইন সেলারদের জন্য ৫টি সোর্সিং সুযোগ</span><span class="en">5 Sourcing Opportunities for Online Sellers</span></h3>
+      <p><span class="bn">কম প্রতিযোগিতার দেশি পণ্য</span><span class="en">Low-competition local products</span></p></div>
+    </div>
+    <div class="uh-vcard" data-cat="story">
+      <div class="vph"><div class="play">▶</div><div class="tt"><span class="bn">ভিডিও আসছে</span><span class="en">Video coming soon</span></div></div>
+      <div class="bd"><span class="tag"><span class="bn">সফলতার গল্প</span><span class="en">Success Story</span></span>
+      <h3><span class="bn">কলাবতী শাড়ি: বান্দরবানের নারীদের উদ্ভাবন</span><span class="en">Kolaboti Saree: An Innovation by Bandarban's Women</span></h3>
+      <p><span class="bn">দেশের প্রথম কলার আঁশের শাড়ির গল্প</span><span class="en">The story of the country's first banana-fiber saree</span></p></div>
+    </div>
+  </div>
+
+  <div class="uh-sub">
+    <h2><span class="bn">📺 নতুন ভিডিও মিস করতে না চাইলে</span><span class="en">📺 Don't Miss New Videos</span></h2>
+    <p><span class="bn">ইউটিউব চ্যানেলে সাবস্ক্রাইব করুন — প্রতি সপ্তাহে নতুন বিজনেস কনটেন্ট।</span><span class="en">Subscribe on YouTube — new business content every week.</span></p>
+    <!-- TODO: replace # with your actual YouTube channel URL -->
+    <a class="uh-cta" href="#"><span class="bn">ইউটিউবে সাবস্ক্রাইব</span><span class="en">Subscribe on YouTube</span></a>
+  </div>
+</div>
+
+<footer class="uh-foot">
+  <div class="wrap">© ২০২৬ <span class="bn">উদ্যোক্তা হাব</span><span class="en">UdyoktaHub</span> · coder.saki@gmail.com</div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var root = document.getElementById('uhRoot'), btn = document.getElementById('uhLang');
+  function setLang(l){ root.classList.toggle('lang-en', l==='en'); btn.textContent = l==='en' ? 'বাংলা' : 'EN'; try{localStorage.setItem('uh-lang', l);}catch(e){} }
+  var saved='bn'; try{saved=localStorage.getItem('uh-lang')||'bn';}catch(e){}
+  setLang(saved);
+  btn.addEventListener('click', function(){ setLang(root.classList.contains('lang-en') ? 'bn' : 'en'); });
+
+  // category filter
+  var chips = root.querySelectorAll('.uh-chip'), cards = root.querySelectorAll('.uh-vcard');
+  chips.forEach(function(ch){
+    ch.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('on'); });
+      ch.classList.add('on');
+      var cat = ch.getAttribute('data-cat');
+      cards.forEach(function(card){
+        card.style.display = (cat === 'all' || card.getAttribute('data-cat') === cat) ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
