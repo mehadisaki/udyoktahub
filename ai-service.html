@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI সেবা — উদ্যোক্তা হাব | AI Service Details</title>
+<meta name="description" content="উদ্যোক্তা হাবের AI বিজনেস সেবা — ডেমোসহ বিস্তারিত এবং সরাসরি রিকোয়েস্ট ফর্ম।">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; }
+  .uh { font-family: 'Noto Sans Bengali','Inter',sans-serif; color: #1a1a1a; line-height: 1.8; }
+  .uh * { box-sizing: border-box; }
+  .uh .wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+  .uh a { text-decoration: none; }
+  .uh.lang-en .bn { display: none !important; }
+  .uh:not(.lang-en) .en { display: none !important; }
+  .uh-head { position: sticky; top: 0; z-index: 50; background: #14532d; box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+  .uh-nav { display: flex; align-items: center; gap: 18px; padding: 12px 20px; max-width: 1080px; margin: 0 auto; flex-wrap: wrap; }
+  .uh-logo { font-size: 20px; font-weight: 800; color: #fff !important; margin-right: auto; }
+  .uh-logo em { color: #86efac; font-style: normal; }
+  .uh-nav a.nl { color: #dcfce7 !important; font-size: 14.5px; font-weight: 600; padding: 6px 2px; border-bottom: 2px solid transparent; }
+  .uh-nav a.nl:hover, .uh-nav a.nl.on { color: #fff !important; border-bottom-color: #86efac; }
+  .uh-lang { background: #86efac; color: #14532d; border: none; font-weight: 800; font-size: 13px; padding: 7px 14px; border-radius: 18px; cursor: pointer; font-family: inherit; }
+  .uh-phero { background: linear-gradient(135deg, #14532d, #166534); color: #fff; padding: 38px 0 34px; text-align: center; }
+  .uh-phero .ic { font-size: 46px; }
+  .uh-phero h1 { font-size: 28px; margin: 6px 0 8px; }
+  .uh-phero p { color: #dcfce7; font-size: 15px; max-width: 680px; margin: 0 auto; }
+  .uh-crumb { font-size: 13px; margin: 18px 0 0; color: #6b7280; }
+  .uh-crumb a { color: #15803d; font-weight: 600; }
+  .uh-cols { display: grid; grid-template-columns: 1.05fr .95fr; gap: 22px; margin: 24px 0 46px; align-items: start; }
+  .uh-panel { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 24px; box-shadow: 0 2px 10px rgba(20,83,45,0.07); }
+  .uh-panel h2 { font-size: 19px; color: #14532d; margin: 0 0 12px; border-bottom: 2px solid #bbf7d0; padding-bottom: 8px; }
+  .uh-panel ul { margin: 0; padding-inline-start: 20px; font-size: 14.5px; color: #374151; }
+  .uh-panel li { margin: 6px 0; }
+  .uh-meta { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0 0; }
+  .uh-meta span { background: #f0fdf4; border: 1px solid #bbf7d0; color: #15803d; font-size: 12.5px; font-weight: 700; padding: 4px 14px; border-radius: 14px; }
+  .uh-demo { background: #f8fafc; border: 1.5px dashed #94a3b8; border-radius: 14px; padding: 18px 20px; margin-top: 16px; }
+  .uh-demo .dtag { display: inline-block; background: #1e293b; color: #e2e8f0; font-size: 11.5px; font-weight: 700; padding: 3px 12px; border-radius: 10px; margin-bottom: 10px; letter-spacing: .5px; }
+  .uh-demo h3 { font-size: 15.5px; color: #14532d; margin: 0 0 8px; }
+  .uh-demo p, .uh-demo td, .uh-demo li { font-size: 13.5px; color: #374151; }
+  .uh-demo table { width: 100%; border-collapse: collapse; margin: 8px 0; }
+  .uh-demo th { background: #14532d; color: #fff; font-size: 12.5px; padding: 7px 10px; text-align: left; }
+  .uh-demo td { border: 1px solid #e2e8f0; padding: 7px 10px; background: #fff; }
+  .uh-score { display: flex; align-items: center; gap: 10px; margin: 6px 0; font-size: 13.5px; }
+  .uh-score .bar { flex: 1; height: 9px; background: #e5e7eb; border-radius: 6px; overflow: hidden; }
+  .uh-score .bar i { display: block; height: 100%; background: #15803d; border-radius: 6px; }
+  .uh-demo .verdict { background: #dcfce7; color: #14532d; font-weight: 700; font-size: 13.5px; padding: 8px 14px; border-radius: 10px; text-align: center; margin-top: 10px; }
+  .uh-demo .blink { color: #15803d; font-weight: 700; font-size: 13.5px; }
+  .uh-mini { display: flex; gap: 10px; flex-wrap: wrap; margin: 8px 0; }
+  .uh-mini div { flex: 1; min-width: 110px; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px; text-align: center; }
+  .uh-mini .v { font-size: 16px; font-weight: 800; color: #15803d; }
+  .uh-mini .l { font-size: 11.5px; color: #64748b; }
+  .uh-copybox { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 14px; margin: 8px 0; }
+  .uh-copybox .cb-l { font-size: 11px; font-weight: 800; letter-spacing: .5px; color: #94a3b8; }
+  /* form */
+  .uh-form h2 { font-size: 19px; color: #14532d; margin: 0 0 4px; border-bottom: 2px solid #bbf7d0; padding-bottom: 8px; }
+  .uh-form .sub { font-size: 13px; color: #6b7280; margin: 8px 0 14px; }
+  .uh-field { margin-bottom: 13px; }
+  .uh-field label { display: block; font-size: 13.5px; font-weight: 700; color: #374151; margin-bottom: 4px; }
+  .uh-field input, .uh-field select, .uh-field textarea { width: 100%; padding: 10px 12px; border: 1.5px solid #d1d5db; border-radius: 8px; font-size: 14.5px; font-family: inherit; }
+  .uh-field textarea { min-height: 110px; resize: vertical; }
+  .uh-field input:focus, .uh-field select:focus, .uh-field textarea:focus { outline: none; border-color: #15803d; }
+  .uh-submit { width: 100%; background: #15803d; color: #fff; font-weight: 800; font-size: 15.5px; padding: 13px; border: none; border-radius: 26px; cursor: pointer; font-family: inherit; }
+  .uh-submit:hover { background: #14532d; }
+  .uh-privacy { font-size: 12px; color: #9ca3af; margin-top: 10px; text-align: center; }
+  .uh-sent { background: #dcfce7; border: 1.5px solid #86efac; color: #14532d; font-weight: 700; font-size: 14.5px; padding: 14px 18px; border-radius: 12px; margin: 20px 0 0; display: none; text-align: center; }
+  .uh-other { margin: 0 0 46px; }
+  .uh-other h2 { font-size: 20px; color: #14532d; text-align: center; }
+  .uh-chips { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .uh-chips a { background: #f0fdf4; border: 1.5px solid #86efac; color: #14532d !important; font-size: 13.5px; font-weight: 700; padding: 8px 18px; border-radius: 20px; }
+  .uh-chips a:hover { background: #15803d; color: #fff !important; }
+  .uh-foot { background: #052e16; color: #bbf7d0; padding: 24px 0; text-align: center; font-size: 13.5px; }
+  @media (max-width: 800px) { .uh-cols { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="uh" id="uhRoot">
+
+<header class="uh-head">
+  <div class="uh-nav">
+    <a class="uh-logo" href="index.html">🌱 <span class="bn">উদ্যোক্তা <em>হাব</em></span><span class="en">Udyokta<em>Hub</em></span></a>
+    <a class="nl" href="blog.html"><span class="bn">ব্লগ</span><span class="en">Blog</span></a>
+    <a class="nl on" href="ai-services.html"><span class="bn">AI সেবা</span><span class="en">AI Services</span></a>
+    <a class="nl" href="planner.html"><span class="bn">বিজনেস প্ল্যানার</span><span class="en">Planner</span></a>
+    <a class="nl" href="videos.html"><span class="bn">ভিডিও</span><span class="en">Videos</span></a>
+    <a class="nl" href="about.html"><span class="bn">আমাদের কথা</span><span class="en">About</span></a>
+    <button class="uh-lang" id="uhLang">EN</button>
+  </div>
+</header>
+
+<section class="uh-phero">
+  <div class="wrap">
+    <div class="ic" id="svcIcon">🤖</div>
+    <h1 id="svcTitle"></h1>
+    <p id="svcTag"></p>
+  </div>
+</section>
+
+<div class="wrap">
+  <p class="uh-crumb"><a href="ai-services.html"><span class="bn">← সব সেবা</span><span class="en">← All services</span></a></p>
+
+  <div class="uh-sent" id="sentBox"><span class="bn">✅ আপনার রিকোয়েস্ট পৌঁছে গেছে! ২৪ ঘণ্টার মধ্যে ইমেইলে স্কোপ ও মূল্যসহ উত্তর পাবেন।</span><span class="en">✅ Your request has been received! You'll get a reply with scope & pricing within 24 hours.</span></div>
+
+  <div class="uh-cols">
+    <div>
+      <div class="uh-panel">
+        <h2><span class="bn">যা যা পাবেন</span><span class="en">What You Get</span></h2>
+        <ul id="svcDeliv"></ul>
+        <div class="uh-meta" id="svcMeta"></div>
+        <div class="uh-demo" id="svcDemo"></div>
+      </div>
+    </div>
+
+    <div class="uh-panel uh-form">
+      <h2><span class="bn">📝 সেবাটি রিকোয়েস্ট করুন</span><span class="en">📝 Request This Service</span></h2>
+      <p class="sub"><span class="bn">ফর্ম জমা দিন — ২৪ ঘণ্টার মধ্যে স্কোপ ও মূল্যসহ ইমেইলে উত্তর পাবেন। অগ্রিম পেমেন্ট লাগে না।</span><span class="en">Submit the form — you'll receive scope & pricing by email within 24 hours. No advance payment.</span></p>
+      <form id="reqForm" action="https://formsubmit.co/coder.saki@gmail.com" method="POST">
+        <input type="hidden" name="_subject" id="fSubject" value="UdyoktaHub Service Request">
+        <input type="hidden" name="Service" id="fService" value="">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" id="fNext" value="https://mehadisaki.github.io/udyoktahub/ai-service.html?sent=1">
+        <input type="text" name="_honey" style="display:none">
+        <div class="uh-field"><label><span class="bn">আপনার নাম *</span><span class="en">Your name *</span></label><input type="text" name="Name" required></div>
+        <div class="uh-field"><label><span class="bn">ইমেইল *</span><span class="en">Email *</span></label><input type="email" name="Email" required></div>
+        <div class="uh-field"><label><span class="bn">ফোন / WhatsApp</span><span class="en">Phone / WhatsApp</span></label><input type="text" name="Phone"></div>
+        <div class="uh-field"><label><span class="bn">ব্যবসার ধরন</span><span class="en">Business type</span></label>
+          <select name="Business_Type">
+            <option>SME / ম্যানুফ্যাকচারিং</option>
+            <option>অনলাইন সেলার / ই-কমার্স</option>
+            <option>নতুন উদ্যোক্তা (আইডিয়া পর্যায়ে)</option>
+            <option>রপ্তানিকারক</option>
+            <option>অন্যান্য / Other</option>
+          </select>
+        </div>
+        <div class="uh-field"><label><span class="bn">আনুমানিক বাজেট</span><span class="en">Approximate budget</span></label>
+          <select name="Budget">
+            <option>আলোচনা সাপেক্ষে / Negotiable</option>
+            <option>৳ ৫,০০০-এর কম</option>
+            <option>৳ ৫,০০০–১৫,০০০</option>
+            <option>৳ ১৫,০০০+</option>
+          </select>
+        </div>
+        <div class="uh-field"><label><span class="bn">আপনার ব্যবসা/আইডিয়া ও প্রয়োজন বিস্তারিত লিখুন *</span><span class="en">Describe your business/idea & requirement *</span></label><textarea name="Details" required placeholder="যেমন: আমি টাঙ্গাইলে আনারস ফাইবারের ব্যবসা শুরু করতে চাই। ইউরোপে রপ্তানির সম্ভাবনা ও প্রতিযোগী জানতে চাই..."></textarea></div>
+        <button class="uh-submit" type="submit"><span class="bn">রিকোয়েস্ট পাঠান →</span><span class="en">Send Request →</span></button>
+        <p class="uh-privacy"><span class="bn">🔒 আপনার তথ্য শুধু এই সেবার জন্যই ব্যবহৃত হবে — কারও সঙ্গে শেয়ার করা হয় না।</span><span class="en">🔒 Your info is used only for this service — never shared.</span></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="uh-other">
+    <h2><span class="bn">অন্যান্য সেবা</span><span class="en">Other Services</span></h2>
+    <div class="uh-chips" id="otherChips"></div>
+  </div>
+</div>
+
+<footer class="uh-foot">
+  <div class="wrap">© ২০২৬ <span class="bn">উদ্যোক্তা হাব</span><span class="en">UdyoktaHub</span> · coder.saki@gmail.com</div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var root = document.getElementById('uhRoot'), btn = document.getElementById('uhLang');
+  function setLang(l){ root.classList.toggle('lang-en', l==='en'); btn.textContent = l==='en' ? 'বাংলা' : 'EN'; try{localStorage.setItem('uh-lang', l);}catch(e){} }
+  var saved='bn'; try{saved=localStorage.getItem('uh-lang')||'bn';}catch(e){}
+  setLang(saved);
+  btn.addEventListener('click', function(){ setLang(root.classList.contains('lang-en') ? 'bn' : 'en'); });
+
+  function be(bn, en){ return '<span class="bn">'+bn+'</span><span class="en">'+en+'</span>'; }
+
+  var S = {
+    'market-research': {
+      icon: '📊',
+      title: be('কাস্টম মার্কেট রিসার্চ রিপোর্ট', 'Custom Market Research Report'),
+      tag: be('আপনার পণ্য/খাতের বাজারের আকার, প্রবৃদ্ধি, প্রতিযোগী ও ক্রেতা — চার্ট ও তথ্যসূত্রসহ পূর্ণাঙ্গ রিপোর্ট।', 'Market size, growth, competitors, and buyers for your product/sector — a complete report with charts and citations.'),
+      deliv: [
+        be('বৈশ্বিক ও দেশীয় বাজারের আকার + প্রবৃদ্ধি পূর্বাভাস (CAGR)', 'Global & local market size + growth forecast (CAGR)'),
+        be('SWOT + ঝুঁকি বিশ্লেষণ', 'SWOT + risk analysis'),
+        be('মূল প্রতিযোগী ও ক্রেতা-চ্যানেল ম্যাপ', 'Key competitors & buyer-channel map'),
+        be('চার্টসহ PDF রিপোর্ট (বাংলা বা English) — প্রতিটি সংখ্যার তথ্যসূত্র', 'PDF report with charts (Bangla or English) — every number cited')
+      ],
+      meta: [be('ডেলিভারি: ৩–৫ দিন','Delivery: 3–5 days'), be('১ রাউন্ড ফ্রি রিভিশন','1 free revision')],
+      demo: '<span class="dtag">DEMO / নমুনা</span><h3>'+be('নমুনা রিপোর্টের অংশ: কলা ফাইবার রপ্তানি','Sample report excerpt: Banana Fiber Export')+'</h3>'
+        + '<div class="uh-mini"><div><div class="v">$৯.৪ কোটি+</div><div class="l">'+be('সম্ভাব্য রপ্তানি আয়','Potential export revenue')+'</div></div><div><div class="v">৭.৪%</div><div class="l">CAGR (২০২৬–৩৫)</div></div><div><div class="v">৩৯</div><div class="l">'+be('রপ্তানি গন্তব্য','Export destinations')+'</div></div></div>'
+        + '<p>'+be('পূর্ণাঙ্গ নমুনা দেখতে চান? আমাদের প্রকাশিত ফাইবার-রিপোর্টটিই এই সেবার মান-নমুনা:','Want the full sample? Our published fiber report is the quality benchmark for this service:')+' <a class="blink" href="kola-anarosh-fiber-roptani.html">'+be('রিপোর্টটি পড়ুন →','Read the report →')+'</a></p>'
+    },
+    'idea-validation': {
+      icon: '✅',
+      title: be('বিজনেস আইডিয়া ভ্যালিডেশন', 'Business Idea Validation'),
+      tag: be('টাকা ঢালার আগে জানুন আইডিয়াটি টিকবে কি না — স্কোরকার্ড ও গো/নো-গো সুপারিশসহ।', 'Know if your idea will survive before you invest — with a scorecard and go/no-go recommendation.'),
+      deliv: [
+        be('চাহিদা ও ট্রেন্ড যাচাই (সার্চ + বাজার ডেটা)', 'Demand & trend check (search + market data)'),
+        be('প্রতিযোগিতা ও প্রবেশ-বাধা মূল্যায়ন', 'Competition & entry-barrier assessment'),
+        be('আনুমানিক খরচ ও ব্রেক-ইভেন মডেল', 'Estimated cost & break-even model'),
+        be('৬-মাত্রার স্কোরকার্ড + গো/নো-গো সুপারিশ', '6-dimension scorecard + go/no-go recommendation')
+      ],
+      meta: [be('ডেলিভারি: ২–৩ দিন','Delivery: 2–3 days'), be('১ রাউন্ড ফ্রি রিভিশন','1 free revision')],
+      demo: '<span class="dtag">DEMO / নমুনা</span><h3>'+be('নমুনা স্কোরকার্ড: হোমমেড ফ্রোজেন ফুড ডেলিভারি','Sample scorecard: Homemade Frozen Food Delivery')+'</h3>'
+        + '<div class="uh-score"><span>'+be('চাহিদা','Demand')+'</span><div class="bar"><i style="width:80%"></i></div><b>৮/১০</b></div>'
+        + '<div class="uh-score"><span>'+be('প্রতিযোগিতা','Competition')+'</span><div class="bar"><i style="width:60%;background:#f59e0b"></i></div><b>৬/১০</b></div>'
+        + '<div class="uh-score"><span>'+be('মার্জিন','Margin')+'</span><div class="bar"><i style="width:70%"></i></div><b>৭/১০</b></div>'
+        + '<div class="uh-score"><span>'+be('স্কেল-সম্ভাবনা','Scalability')+'</span><div class="bar"><i style="width:50%;background:#f59e0b"></i></div><b>৫/১০</b></div>'
+        + '<div class="verdict">🟢 '+be('গো — তবে প্রথম ৬ মাস এক এলাকায় সীমিত রেখে ইউনিট-ইকোনমিক্স প্রমাণ করুন','GO — but stay in one area for 6 months to prove unit economics')+'</div>'
+    },
+    'business-plan': {
+      icon: '📝',
+      title: be('বিজনেস প্ল্যান তৈরি', 'Business Plan Writing'),
+      tag: be('ব্যাংক ঋণ, বিনিয়োগকারী বা নিজের রোডম্যাপ — আর্থিক প্রক্ষেপণসহ পূর্ণাঙ্গ প্ল্যান।', 'For bank loans, investors, or your own roadmap — a complete plan with financial projections.'),
+      deliv: [
+        be('এক্সিকিউটিভ সামারি, বাজার ও প্রতিযোগিতা বিশ্লেষণ', 'Executive summary, market & competition analysis'),
+        be('অপারেশন ও মার্কেটিং পরিকল্পনা', 'Operations & marketing plan'),
+        be('৩ বছরের আর্থিক প্রক্ষেপণ (Excel ফাইলসহ)', '3-year financial projections (with Excel file)'),
+        be('ব্যাংক/বিনিয়োগকারী-প্রস্তুত ফরম্যাট (Word + PDF)', 'Bank/investor-ready format (Word + PDF)')
+      ],
+      meta: [be('ডেলিভারি: ৫–৭ দিন','Delivery: 5–7 days'), be('২ রাউন্ড ফ্রি রিভিশন','2 free revisions')],
+      demo: '<span class="dtag">DEMO / নমুনা</span><h3>'+be('নমুনা: আর্থিক প্রক্ষেপণের অংশ','Sample: financial projection excerpt')+'</h3>'
+        + '<table><tr><th></th><th>'+be('বছর ১','Year 1')+'</th><th>'+be('বছর ২','Year 2')+'</th><th>'+be('বছর ৩','Year 3')+'</th></tr>'
+        + '<tr><td>'+be('আয়','Revenue')+'</td><td>৳ ১৮ লক্ষ</td><td>৳ ৪২ লক্ষ</td><td>৳ ৭৫ লক্ষ</td></tr>'
+        + '<tr><td>'+be('নিট মুনাফা','Net profit')+'</td><td>৳ ২.১ লক্ষ</td><td>৳ ৯.৮ লক্ষ</td><td>৳ ২১ লক্ষ</td></tr>'
+        + '<tr><td>'+be('মার্জিন','Margin')+'</td><td>১১.৭%</td><td>২৩.৩%</td><td>২৮%</td></tr></table>'
+        + '<p style="font-size:12px;color:#94a3b8">'+be('* কাল্পনিক নমুনা — আপনার প্ল্যানে আপনার প্রকৃত সংখ্যা ও অনুমান-ভিত্তি ব্যবহৃত হবে','* Illustrative sample — your plan uses your real numbers and stated assumptions')+'</p>'
+    },
+    'competitor-analysis': {
+      icon: '🎯',
+      title: be('প্রতিযোগী বিশ্লেষণ', 'Competitor Analysis'),
+      tag: be('আপনার প্রধান ৩–৫ প্রতিযোগীর দাম, পণ্য, মার্কেটিং ও দুর্বলতা — এবং আপনি কোথায় জিতবেন।', 'Pricing, products, marketing & weaknesses of your top 3–5 competitors — and where you can win.'),
+      deliv: [
+        be('পাশাপাশি তুলনা-ম্যাট্রিক্স (দাম, পণ্য, চ্যানেল, রিভিউ)', 'Side-by-side comparison matrix (price, product, channel, reviews)'),
+        be('প্রতিযোগীর মার্কেটিং ও পজিশনিং বিশ্লেষণ', 'Competitor marketing & positioning analysis'),
+        be('পজিশনিং-গ্যাপ: যে জায়গা কেউ নেয়নি', 'Positioning gaps: spaces nobody has claimed'),
+        be('আপনার জন্য ৫টি কার্যকর অ্যাকশন সুপারিশ', '5 actionable recommendations for you')
+      ],
+      meta: [be('ডেলিভারি: ৩–৪ দিন','Delivery: 3–4 days'), be('১ রাউন্ড ফ্রি রিভিশন','1 free revision')],
+      demo: '<span class="dtag">DEMO / নমুনা</span><h3>'+be('নমুনা ম্যাট্রিক্স: অর্গানিক মধু ব্র্যান্ড (ঢাকা)','Sample matrix: organic honey brands (Dhaka)')+'</h3>'
+        + '<table><tr><th></th><th>'+be('ব্র্যান্ড A','Brand A')+'</th><th>'+be('ব্র্যান্ড B','Brand B')+'</th><th>'+be('আপনার সুযোগ','Your opening')+'</th></tr>'
+        + '<tr><td>'+be('দাম/৫০০g','Price/500g')+'</td><td>৳ ৬৫০</td><td>৳ ৪৮০</td><td>৳ ৫৫০ + GI গল্প</td></tr>'
+        + '<tr><td>'+be('দুর্বলতা','Weakness')+'</td><td>'+be('সোর্স অস্বচ্ছ','Opaque sourcing')+'</td><td>'+be('প্যাকেজিং দুর্বল','Weak packaging')+'</td><td>'+be('ল্যাব-টেস্ট রিপোর্ট দেখান','Show lab-test reports')+'</td></tr></table>'
+        + '<p style="font-size:12px;color:#94a3b8">'+be('* কাল্পনিক নমুনা — আসল রিপোর্টে প্রকৃত প্রতিযোগীর নাম ও ডেটা থাকে','* Illustrative — the real report names actual competitors with real data')+'</p>'
+    },
+    'buyer-discovery': {
+      icon: '🌍',
+      title: be('রপ্তানি ক্রেতা খোঁজা', 'Export Buyer Discovery'),
+      tag: be('আপনার পণ্যের সম্ভাব্য বিদেশি ক্রেতার তালিকা — HS কোড, কমপ্লায়েন্স চেকলিস্ট ও আউটরিচ টেমপ্লেটসহ।', 'A list of potential foreign buyers for your product — with HS codes, compliance checklist & outreach templates.'),
+      deliv: [
+        be('১০–২০ সম্ভাব্য ক্রেতা/আমদানিকারকের তালিকা (দেশ, ধরন, সোর্স-লিংক)', 'List of 10–20 potential buyers/importers (country, type, source links)'),
+        be('আপনার পণ্যের HS কোড ও টার্গেট-বাজার কমপ্লায়েন্স চেকলিস্ট', 'HS code & target-market compliance checklist'),
+        be('প্রাসঙ্গিক ট্রেড ফেয়ার ও B2B প্ল্যাটফর্ম তালিকা', 'Relevant trade fairs & B2B platform list'),
+        be('২টি আউটরিচ ইমেইল টেমপ্লেট (English)', '2 outreach email templates (English)')
+      ],
+      meta: [be('ডেলিভারি: ৪–৬ দিন','Delivery: 4–6 days'), be('১ রাউন্ড ফ্রি রিভিশন','1 free revision')],
+      demo: '<span class="dtag">DEMO / নমুনা</span><h3>'+be('নমুনা তালিকার অংশ: কলা ফাইবার','Sample list excerpt: banana fiber')+'</h3>'
+        + '<table><tr><th>'+be('ক্রেতার ধরন','Buyer type')+'</th><th>'+be('দেশ','Country')+'</th><th>'+be('কী কেনে','Buys')+'</th></tr>'
+        + '<tr><td>'+be('ভেগান-লেদার নির্মাতা','Vegan-leather maker')+'</td><td>UK</td><td>'+be('পাতা-ফাইবার, বড় ভলিউম','Leaf fiber, high volume')+'</td></tr>'
+        + '<tr><td>'+be('হোম-ডেকর আমদানিকারক','Home-decor importer')+'</td><td>'+be('জার্মানি','Germany')+'</td><td>'+be('ফাইবার-মিশ্র পণ্য','Fiber-blend products')+'</td></tr>'
+        + '<tr><td>'+be('টেক্সটাইল মিল','Textile mill')+'</td><td>'+be('ভারত','India')+'</td><td>'+be('গ্রেডেড কাঁচা ফাইবার','Graded raw fiber')+'</td></tr></table>'
+        + '<p style="font-size:12px;color:#94a3b8">'+be('* আসল তালিকায় প্রতিষ্ঠানের নাম, ওয়েবসাইট ও যোগাযোগ-সূত্র থাকে','* The real list includes company names, websites & contact sources')+'</p>'
+    },
+    'content-copy': {
+      icon: '✍️',
+      title: be('কনটেন্ট ও মার্কেটিং কপি', 'Content & Marketing Copy'),
+      tag: be('পণ্যের বর্ণনা, অ্যাড কপি, ওয়েবসাইট কনটেন্ট — বাংলা ও English, আপনার ব্র্যান্ড-ভয়েসে।', 'Product descriptions, ad copy, website content — Bangla & English, in your brand voice.'),
+      deliv: [
+        be('SEO-বান্ধব পণ্য-বর্ণনা / ওয়েব কনটেন্ট', 'SEO-friendly product descriptions / web content'),
+        be('ফেসবুক/ইনস্টাগ্রাম অ্যাড কপি (৩ ভ্যারিয়েশন)', 'Facebook/Instagram ad copy (3 variations)'),
+        be('দ্বিভাষিক ডেলিভারি (বাংলা + English)', 'Bilingual delivery (Bangla + English)'),
+        be('আপনার ব্র্যান্ড-ভয়েস অনুযায়ী টোন-ম্যাচিং', 'Tone-matched to your brand voice')
+      ],
+      meta: [be('ডেলিভারি: ২–৪ দিন','Delivery: 2–4 days'), be('২ রাউন্ড ফ্রি রিভিশন','2 free revisions')],
+      demo: '<span class="dtag">DEMO / নমুনা</span><h3>'+be('নমুনা: অ্যাড কপি রূপান্তর','Sample: ad copy transformation')+'</h3>'
+        + '<div class="uh-copybox"><div class="cb-l">'+be('আগে (সাধারণ)','BEFORE (generic)')+'</div><p style="margin:4px 0">"আমাদের মধু ১০০% খাঁটি। আজই অর্ডার করুন।"</p></div>'
+        + '<div class="uh-copybox" style="border-color:#86efac;background:#f0fdf4"><div class="cb-l" style="color:#15803d">'+be('পরে (কনভার্শন-কেন্দ্রিক)','AFTER (conversion-focused)')+'</div><p style="margin:4px 0">"সুন্দরবনের মৌয়ালরা যে মধু নিজের সন্তানকে খাওয়ান — ল্যাব-টেস্ট রিপোর্টসহ সেটিই পৌঁছে যাবে আপনার দরজায়। প্রথম অর্ডারে ফ্রি ডেলিভারি 🍯"</p></div>'
+    }
+  };
+
+  var order = ['market-research','idea-validation','business-plan','competitor-analysis','buyer-discovery','content-copy'];
+  var params = new URLSearchParams(location.search);
+  var key = params.get('s');
+  if (!S[key]) key = 'market-research';
+  var svc = S[key];
+
+  document.getElementById('svcIcon').textContent = svc.icon;
+  document.getElementById('svcTitle').innerHTML = svc.title;
+  document.getElementById('svcTag').innerHTML = svc.tag;
+  document.getElementById('svcDeliv').innerHTML = svc.deliv.map(function(d){ return '<li>'+d+'</li>'; }).join('');
+  document.getElementById('svcMeta').innerHTML = svc.meta.map(function(m){ return '<span>'+m+'</span>'; }).join('');
+  document.getElementById('svcDemo').innerHTML = svc.demo;
+
+  // form wiring
+  var plain = { 'market-research':'Market Research', 'idea-validation':'Idea Validation', 'business-plan':'Business Plan', 'competitor-analysis':'Competitor Analysis', 'buyer-discovery':'Buyer Discovery', 'content-copy':'Content & Copy' };
+  document.getElementById('fService').value = plain[key];
+  document.getElementById('fSubject').value = 'UdyoktaHub Request: ' + plain[key];
+  document.getElementById('fNext').value = 'https://mehadisaki.github.io/udyoktahub/ai-service.html?s=' + key + '&sent=1';
+
+  // other services chips
+  document.getElementById('otherChips').innerHTML = order.filter(function(k){ return k !== key; }).map(function(k){
+    return '<a href="ai-service.html?s='+k+'">'+S[k].icon+' '+S[k].title+'</a>';
+  }).join('');
+
+  // success banner
+  if (params.get('sent') === '1') {
+    document.getElementById('sentBox').style.display = 'block';
+    window.scrollTo(0, 0);
+  }
+
+  // set page title
+  document.title = (saved==='en' ? 'AI Service — UdyoktaHub' : 'AI সেবা — উদ্যোক্তা হাব') + ' | ' + plain[key];
+})();
+</script>
+</body>
+</html>
